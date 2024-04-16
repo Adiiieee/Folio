@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { db } from "~/server/db";
 
+export const dynamic = "force-dynamic";
+
 const mockUrls = [
   "https://utfs.io/f/d120e44f-be44-4479-89f9-09e67e3d20d8-gawbxk.jpg",
   "https://utfs.io/f/c7ddb322-66c2-4916-acef-cfe8794b7466-eqaer4.jpg",
@@ -26,7 +28,13 @@ export default async function HomePage() {
         ))}
         {mockImages.map((image) => (
           <div key={image.id} className="w-48">
-            <Image src={image.url} alt="image" width={200} height={200} />
+            <Image
+              src={image.url}
+              alt="image"
+              width={200}
+              height={200}
+              priority
+            />
           </div>
         ))}
       </div>
