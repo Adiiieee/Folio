@@ -1,11 +1,11 @@
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
+import { extractRouterConfig } from "uploadthing/server";
 import "@uploadthing/react/styles.css";
+import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 
 import "@styles/globals.css";
 import { TopNav } from "@componens/TopNav/TopNav";
-import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
-import { extractRouterConfig } from "uploadthing/server";
 import { ourFileRouter } from "./api/uploadthing/core";
 
 const inter = Inter({
