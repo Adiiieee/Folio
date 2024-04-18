@@ -5,6 +5,8 @@ import { useRouter } from "next/navigation";
 
 import { UploadButton } from "~/utils/uploadthing";
 
+export const dynamic = "auto";
+
 export const TopNav = () => {
   const router = useRouter();
 
