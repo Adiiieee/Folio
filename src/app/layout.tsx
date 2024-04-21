@@ -1,8 +1,8 @@
 import { Inter } from "next/font/google";
 import { ClerkProvider } from "@clerk/nextjs";
 import { extractRouterConfig } from "uploadthing/server";
-import "@uploadthing/react/styles.css";
 import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
+import "@uploadthing/react/styles.css";
 
 import "@styles/globals.css";
 import { TopNav } from "@componens/TopNav/TopNav";
@@ -21,8 +21,10 @@ export const metadata = {
 
 export default function RootLayout({
   children,
+  modal,
 }: {
   children: React.ReactNode;
+  modal: React.ReactNode;
 }) {
   return (
     <ClerkProvider>
@@ -39,6 +41,8 @@ export default function RootLayout({
         <body className={`font-sans ${inter.variable} flex flex-col gap-4`}>
           <TopNav />
           {children}
+          {modal}
+          <div className="modal-root" />
         </body>
       </html>
     </ClerkProvider>
