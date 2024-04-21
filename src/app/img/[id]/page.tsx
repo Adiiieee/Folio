@@ -1,7 +1,9 @@
-export default function PhotoPage({
+import FullImageView from "@componens/FullImageView/FullImageView";
+
+export default function ImagePage({
   params: { id },
 }: {
   params: { id: string };
 }) {
-  return <div className="card">{id}</div>;
+  return <FullImageView id={+id} />;
 }
