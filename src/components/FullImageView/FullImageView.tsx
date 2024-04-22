@@ -7,7 +7,7 @@ export default async function FullImageView(props: { id: number }) {
 
   return (
     <div className="flex h-full w-full min-w-0">
-      <div className="relative size-full w-full overflow-hidden">
+      <div className="relative size-full h-[calc(100vh-156px)]">
         <Image
           src={image.url}
           priority
