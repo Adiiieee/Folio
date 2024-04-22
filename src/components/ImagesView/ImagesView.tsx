@@ -3,7 +3,7 @@ import Link from "next/link";
 
 import { getMyImages } from "@server/queries";
 
-const Images = async () => {
+const ImagesView = async () => {
   const images = await getMyImages();
 
   return (
@@ -26,4 +26,4 @@ const Images = async () => {
   );
 };
 
-export default Images;
+export default ImagesView;
