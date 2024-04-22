@@ -1,7 +1,11 @@
-import React from "react";
+import { Modal } from "./modal";
 
 const loading = () => {
-  return <div className="ms-auto">loading...</div>;
+  return (
+    <Modal>
+      <div className="mx-auto">loading...</div>
+    </Modal>
+  );
 };
 
 export default loading;

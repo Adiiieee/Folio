@@ -5,5 +5,11 @@ export default function ImagePage({
 }: {
   params: { id: string };
 }) {
-  return <FullImageView id={+id} />;
+  if (Number.isNaN(+id)) throw new Error("Invalid photo id");
+
+  return (
+    <>
+      <FullImageView id={+id} />
+    </>
+  );
 }

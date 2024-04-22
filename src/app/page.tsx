@@ -1,6 +1,6 @@
 import { SignedIn, SignedOut } from "@clerk/nextjs";
 
-import Images from "@componens/Images/Images";
+import ImagesView from "@componens/ImagesView/ImagesView";
 
 export const dynamic = "force-dynamic";
 
@@ -9,7 +9,7 @@ export default async function HomePage() {
     <main className="border-rounded flex flex-col">
       <SignedOut>Please sign in above</SignedOut>
       <SignedIn>
-        <Images />
+        <ImagesView />
       </SignedIn>
     </main>
   );
