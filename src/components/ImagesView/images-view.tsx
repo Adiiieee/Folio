@@ -9,7 +9,7 @@ const ImagesView = async () => {
   return (
     <div className="flex flex-wrap gap-4">
       {images.map((image) => (
-        <div key={image.id} className="flex w-48 flex-col">
+        <div key={image.id} className="flex w-56 flex-col">
           <Link href={`/img/${image.id}`}>
             <Image
               src={image.url}
@@ -17,6 +17,7 @@ const ImagesView = async () => {
               width={200}
               height={200}
               priority
+              className="h-48 rounded"
             />
             <div className="truncate">{image.name}</div>
           </Link>
