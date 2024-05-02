@@ -5,9 +5,10 @@ import { NextSSRPlugin } from "@uploadthing/react/next-ssr-plugin";
 import "@uploadthing/react/styles.css";
 
 import "@styles/globals.css";
-import { TopNav } from "@componens/TopNav/TopNav";
+import { TopNav } from "~/app/_components/top-nav";
 import { ourFileRouter } from "./api/uploadthing/core";
 import { CSPostHogProvider } from "./_analytics/provider";
+import { Toaster } from "@componens/ui/sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,12 +42,13 @@ export default function RootLayout({
             routerConfig={extractRouterConfig(ourFileRouter)}
           />
           <body
-            className={`font-sans ${inter.variable} grid h-screen grid-rows-[auto,1fr]`}
+            className={`font-sans ${inter.variable} dark grid h-screen grid-rows-[auto,1fr]`}
           >
             <TopNav />
             {children}
             {modal}
             <div id="modal-root" />
+            <Toaster />
           </body>
         </html>
       </CSPostHogProvider>
